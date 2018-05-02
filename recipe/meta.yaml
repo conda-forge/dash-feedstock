@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   noarch: python
 
@@ -38,7 +38,7 @@ test:
 
 about:
   home: https://plot.ly/dash
-  dev_url: https://github.com/plotly/das://github.com/plotly/dash
+  dev_url: https://github.com/plotly/dash
   license: MIT
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'

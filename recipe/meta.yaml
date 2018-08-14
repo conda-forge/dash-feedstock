@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "0.24.1" %}
-{% set sha256 = "47989c3214147233e86953fd54a527af4fc3027ab140539a64c6bd901206330f" %}
+{% set version = "0.24.2" %}
+{% set sha256 = "dcc9e94cfbe22b281658e622c08cdd8f8c1f5aa2e794a506d05f8a89efc4741b" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
     - flask >=0.12
     - flask-compress
     - plotly
-    - dash-renderer  # not listed in setup.py
+    - dash-renderer
 
 test:
   imports:

@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "0.31.0" %}
-{% set sha256 = "ec29d11d93964bc56767fdb40a40c4c9cfb3723a53d2fd27110fa4d20214fb80" %}
+{% set version = "0.31.1" %}
+{% set sha256 = "6a4ce41b50ca725bd2d002e5b332616042783f67befabb2d02aa22dcbdc3e786" %}
 
 package:
   name: {{ name|lower }}

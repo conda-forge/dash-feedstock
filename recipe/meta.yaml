@@ -33,7 +33,6 @@ requirements:
 
 test:
   imports:
-    - dash.authentication
     - dash.dash
     - dash.dependencies
     - dash.exceptions

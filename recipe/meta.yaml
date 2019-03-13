@@ -26,14 +26,13 @@ requirements:
     - flask >=0.12
     - flask-compress
     - plotly
-    - dash-renderer ==0.18.0
+    - dash-renderer ==0.19.0
     - dash-core-components ==0.43.1
     - dash-html-components ==0.13.5
-    - dash-table ==3.4.0
+    - dash-table ==3.5.0
 
 test:
   imports:
-    - dash.authentication
     - dash.dash
     - dash.dependencies
     - dash.exceptions

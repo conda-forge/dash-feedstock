@@ -26,10 +26,10 @@ requirements:
     - flask >=0.12
     - flask-compress
     - plotly
-    - dash-renderer ==0.22.0
-    - dash-core-components ==0.46.0
-    - dash-html-components ==0.15.0
-    - dash-table ==3.6.0
+    - dash-renderer ==0.24.0
+    - dash-core-components ==0.48.0
+    - dash-html-components ==0.16.0
+    - dash-table ==3.7.0
 
 test:
   imports:

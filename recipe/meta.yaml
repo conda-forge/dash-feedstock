@@ -28,9 +28,9 @@ requirements:
     - flask-compress
     - plotly
     - dash-renderer ==1.0.0
-    - dash-core-components ==1.0.0
+    - dash-core-components ==1.1.0
     - dash-html-components ==1.0.0
-    - dash-table ==4.0.2
+    - dash-table ==4.1.0
     
 test:
   imports:

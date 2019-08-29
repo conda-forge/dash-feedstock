@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "1c849d4ae3410803a7ef27d2954d2b9a0990c88ab813762014c626176088c035" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "843db5c4819ec927ee09be290f917949dcc02643f3db147c3dbc14e3aac4ec21" %}
 
 package:
   name: {{ name|lower }}
@@ -27,10 +27,11 @@ requirements:
     - flask >=1.0.2
     - flask-compress
     - plotly
-    - dash-renderer ==1.0.0
-    - dash-core-components ==1.1.1
-    - dash-html-components ==1.0.0
-    - dash-table ==4.1.0
+    - dash-renderer ==1.0.1
+    - dash-core-components ==1.1.2
+    - dash-html-components ==1.0.1
+    - dash-table ==4.2.0
+    - future
    
 test:
   imports:

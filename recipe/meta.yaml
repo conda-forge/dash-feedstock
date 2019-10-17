@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.3.1" %}
-{% set sha256 = "59e9f34a46b6b6ee58b00f5d2e8ddbd69ad28a51c62313469c513a7e8751df86" %}
+{% set version = "1.4.0" %}
+{% set sha256 = "0e989d63f223406bff69580677e5b77f6c0fc27307f1854296c0b5b347bd0e63" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
@@ -27,10 +27,10 @@ requirements:
     - flask >=1.0.2
     - flask-compress
     - plotly
-    - dash-renderer ==1.1.0
-    - dash-core-components ==1.2.1
+    - dash-renderer ==1.1.1
+    - dash-core-components ==1.3.0
     - dash-html-components ==1.0.1
-    - dash-table ==4.3.0
+    - dash-table ==4.4.0
     - future
    
 test:

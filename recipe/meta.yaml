@@ -32,7 +32,7 @@ requirements:
     - dash-html-components ==1.0.1
     - dash-table ==4.5.0
     - future
-   
+
 test:
   imports:
     - dash.dash

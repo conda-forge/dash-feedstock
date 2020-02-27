@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "e4b30e5312eb9940ebaf1aec3b652d5258a16fdcbd8612884c5cd1f40d20cac4" %}
+{% set version = "1.9.1" %}
+{% set sha256 = "6a488d380f02ba7c8e624a7c4d89f9e39368b8d9ed4a6f463364894a237f1fd8" %}
 
 package:
   name: {{ name|lower }}
@@ -46,7 +46,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Python framework for building reactive web-apps.'
+  summary: A Python framework for building reactive web-apps.
 
 extra:
   recipe-maintainers:

@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.9.0" %}
-{% set sha256 = "678884297afaae08a638cf1bda61c8f89f7cf2c8fd15f36ea29c43559684f4fa" %}
+{% set version = "1.9.1" %}
+{% set sha256 = "6a488d380f02ba7c8e624a7c4d89f9e39368b8d9ed4a6f463364894a237f1fd8" %}
 
 package:
   name: {{ name|lower }}
@@ -28,9 +28,9 @@ requirements:
     - flask-compress
     - plotly
     - dash-renderer ==1.2.4
-    - dash-core-components ==1.8.0
+    - dash-core-components ==1.8.1
     - dash-html-components ==1.0.2
-    - dash-table ==4.6.0
+    - dash-table ==4.6.1
     - future
 
 test:
@@ -46,7 +46,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Python framework for building reactive web-apps.'
+  summary: A Python framework for building reactive web-apps.
 
 extra:
   recipe-maintainers:

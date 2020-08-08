@@ -5,7 +5,7 @@ Home: https://plot.ly/dash
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python framework for building reactive web-apps.
 

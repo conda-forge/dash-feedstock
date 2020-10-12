@@ -5,11 +5,11 @@ Home: https://plot.ly/dash
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dash-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python framework for building reactive web-apps.
 
-
+Development: https://github.com/plotly/dash
 
 Current build status
 ====================

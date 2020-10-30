@@ -17,20 +17,20 @@ build:
   noarch: python
 
 requirements:
-  build:
-    - python
+  host:
+    - python ==2.7.*|>=3.3
     - setuptools
     - pip
   run:
-    - python
+    - python ==2.7.*|>=3.3
     - pyyaml >=5.1.1
     - flask >=1.0.2
     - flask-compress
     - plotly
-    - dash-renderer ==1.8.2
-    - dash-core-components ==1.12.1
+    - dash-renderer ==1.8.3
+    - dash-core-components ==1.13.0
     - dash-html-components ==1.1.1
-    - dash-table ==4.10.1
+    - dash-table ==4.11.0
     - future
 
 test:

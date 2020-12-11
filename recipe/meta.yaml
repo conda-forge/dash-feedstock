@@ -24,13 +24,13 @@ requirements:
   run:
     - python ==2.7.*|>=3.3
     - pyyaml >=5.1.1
-    - flask >=1.0.2
+    - flask >=1.0.4
     - flask-compress
     - plotly
     - dash-renderer ==1.8.3
-    - dash-core-components ==1.14.0
+    - dash-core-components ==1.14.1
     - dash-html-components ==1.1.1
-    - dash-table ==4.11.0
+    - dash-table ==4.11.1
     - future
 
 test:

@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.21.0" %}
-{% set sha256 = "8b03a53e4f7a5f3eded8af099ff54d9981f7879d22d74c7970b9a27c8f698ebb" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "29277c24e2f795b069cb102ce1ab0cd3ad5cf9d3b4fd16c03da9671a5eea28a4" %}
 
 package:
   name: {{ name|lower }}
@@ -32,7 +32,7 @@ requirements:
     - dash-html-components ==1.1.4
     - dash-table ==4.12.0
     - future
-    
+
 test:
   imports:
     - dash.dash

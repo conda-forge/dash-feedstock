@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "1.21.0" %}
-{% set sha256 = "8b03a53e4f7a5f3eded8af099ff54d9981f7879d22d74c7970b9a27c8f698ebb" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "29277c24e2f795b069cb102ce1ab0cd3ad5cf9d3b4fd16c03da9671a5eea28a4" %}
 
 package:
   name: {{ name|lower }}
@@ -18,27 +18,25 @@ build:
 
 requirements:
   host:
-    - python ==2.7.*|>=3.3
+    - python >=3.6
     - setuptools
     - pip
   run:
-    - python ==2.7.*|>=3.3
-    - pyyaml >=5.1.1
+    - python >=3.6
+    - setuptools
     - flask >=1.0.4
     - flask-compress
-    - plotly
-    - dash-renderer ==1.9.1
-    - dash-core-components ==1.17.1
-    - dash-html-components ==1.1.4
-    - dash-table ==4.12.0
-    - future
-    
+    - plotly >=5.0.0
+
 test:
   imports:
     - dash.dash
     - dash.dependencies
     - dash.exceptions
     - dash.resources
+    - dash.dcc
+    - dash.html
+    - dash.dash_table
 
 about:
   home: https://plot.ly/dash

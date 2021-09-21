@@ -37,7 +37,6 @@ test:
     - dash.dcc
     - dash.html
     - dash.dash_table
-    - dash.callback
 
 about:
   home: https://plot.ly/dash

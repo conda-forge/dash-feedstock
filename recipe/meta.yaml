@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
@@ -23,10 +23,13 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - setuptools
+    - dash-core-components ==2.0.0
+    - dash-html-components ==2.0.0
+    - dash-table ==5.0.0    
     - flask >=1.0.4
     - flask-compress
     - plotly >=5.0.0
+    - setuptools
 
 test:
   imports:

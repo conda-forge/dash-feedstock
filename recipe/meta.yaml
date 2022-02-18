@@ -33,6 +33,8 @@ requirements:
     - dash_table >=5.0.0
 
 test:
+  requires:
+    - pytest
   imports:
     - dash.dash
     - dash.dependencies
@@ -41,6 +43,13 @@ test:
     - dash.dcc
     - dash.html
     - dash.dash_table
+  commands:
+    - pytest test_not_found.py
+    - conda install -c conda-forge dash-html-components dash-core-components dash-table -y
+    - pytest test_warnings.py
+  files:
+    - test_not_found.py
+    - test_warnings.py
 
 about:
   home: https://plot.ly/dash

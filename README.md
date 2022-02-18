@@ -11,6 +11,8 @@ Summary: A Python framework for building reactive web-apps.
 
 Development: https://github.com/plotly/dash
 
+Documentation: https://dash.plotly.com
+
 Current build status
 ====================
 

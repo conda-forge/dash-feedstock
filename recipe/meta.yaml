@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
@@ -27,8 +27,14 @@ requirements:
     - flask >=1.0.4
     - flask-compress
     - plotly >=5.0.0
+  run_constrained:
+    - dash-html-components >=2.0.0
+    - dash-core-components >=2.0.0
+    - dash_table >=5.0.0
 
 test:
+  requires:
+    - pytest
   imports:
     - dash.dash
     - dash.dependencies
@@ -37,10 +43,18 @@ test:
     - dash.dcc
     - dash.html
     - dash.dash_table
+  commands:
+    - pytest test_not_found.py
+    - conda install -c conda-forge dash-html-components dash-core-components dash-table -y
+    - pytest test_warnings.py
+  files:
+    - test_not_found.py
+    - test_warnings.py
 
 about:
   home: https://plot.ly/dash
   dev_url: https://github.com/plotly/dash
+  doc_url: https://dash.plotly.com
   license: MIT
   license_family: MIT
   license_file: LICENSE

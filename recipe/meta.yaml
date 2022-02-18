@@ -54,6 +54,7 @@ test:
 about:
   home: https://plot.ly/dash
   dev_url: https://github.com/plotly/dash
+  doc_url: https://dash.plotly.com
   license: MIT
   license_family: MIT
   license_file: LICENSE

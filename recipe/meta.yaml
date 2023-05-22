@@ -26,6 +26,8 @@ requirements:
     - setuptools
     - flask >=1.0.4
     - plotly >=5.0.0
+    - importlib-metadata ==4.8.3
+    - contextvars ==2.4
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

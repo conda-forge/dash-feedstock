@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "2.9.3" %}
-{% set sha256 = "47392f8d6455dc989a697407eb5941f3bad80604df985ab1ac9d4244568ffb34" %}
+{% set version = "2.10.2" %}
+{% set sha256 = "b99839890b44171da0e3668c2e607ef4b4f6948a6074c034693534ba52aa1d2b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 

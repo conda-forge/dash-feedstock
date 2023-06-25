@@ -24,8 +24,14 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - flask >=1.0.4
+    - flask >=1.0.4, <2.3.0
+    - werkzeug <2.3.0
     - plotly >=5.0.0
+    - typing-extensions >=4.1.1
+    - requests
+    - retrying
+    - ansi2html
+    - nest-asyncio
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

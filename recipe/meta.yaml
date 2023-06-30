@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
@@ -24,8 +24,8 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - flask >=1.0.4, <2.3.0
-    - werkzeug <2.3.0
+    - flask >=1.0.4
+    - werkzeug
     - plotly >=5.0.0
     - typing-extensions >=4.1.1
     - requests

@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
@@ -24,15 +24,16 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - flask >=1.0.4
-    - werkzeug
+    - flask >=1.0.4,<2.3.0
+    - werkzeug <2.3.0
     - plotly >=5.0.0
+    - importlib-metadata >=4.8.3  #python_version<"3.7"
+    - contextvars==2.4  #python_version<"3.7"
     - typing-extensions >=4.1.1
     - requests
     - retrying
     - ansi2html
     - nest-asyncio
-  run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0
     - dash_table >=5.0.0

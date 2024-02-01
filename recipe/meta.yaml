@@ -32,6 +32,7 @@ requirements:
     - retrying
     - ansi2html
     - nest-asyncio
+    - importlib-metadata
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

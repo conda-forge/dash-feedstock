@@ -30,7 +30,6 @@ requirements:
     - typing-extensions >=4.1.1
     - requests
     - retrying
-    - ansi2html
     - nest-asyncio
     - importlib-metadata
   run_constrained:

@@ -1,6 +1,6 @@
 {% set name = "dash" %}
-{% set version = "2.14.2" %}
-{% set sha256 = "602e7b0047cc9c48a81244377b812e79198678ef759a0039dadfe81023e20e96" %}
+{% set version = "2.15.0" %}
+{% set sha256 = "d38891337fc855d5673f75e5346354daa063c4ff45a8a6a21f25e858fcae41c2" %}
 
 package:
   name: {{ name|lower }}
@@ -30,8 +30,8 @@ requirements:
     - typing-extensions >=4.1.1
     - requests
     - retrying
-    - ansi2html
     - nest-asyncio
+    - importlib-metadata
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

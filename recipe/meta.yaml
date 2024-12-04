@@ -15,18 +15,25 @@ build:
     - renderer = dash.development.build_process:renderer
     - dash-update-components = dash.development.update_components:cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - sed -i.bak "s/Flask>=1.0.4,<3.1/flask>=1.0.4/g" requirements/install.txt
+    - sed -i.bak "s/Werkzeug<3.1/werkzeug/g" requirements/install.txt
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
+  build:
+    - sed     # [unix]
+    - m2-sed  # [win]
   host:
     - python {{ python_min }}
     - pip
     - setuptools
   run:
     - python >={{ python_min }}
-    - flask >=1.0.4  # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
-    - werkzeug  # plotly/dash@457f71f
+    # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
+    - flask >=1.0.4
+    - werkzeug 
     - plotly >=5.0.0
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0
@@ -50,6 +57,7 @@ test:
     - dash.dash_table
     - dash.testing
   commands:
+    # pip check fails because flask & werkzeug is pinned, #141 , remove from requirements/install.txt and enable pip check
     - pip check
     - dash-generate-components --help
     - renderer --help
@@ -69,8 +77,3 @@ about:
   license_family: MIT
   license: MIT
   license_file: LICENSE
-
-extra:
-  recipe-maintainers:
-    - bandersen23
-    - moorepants

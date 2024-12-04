@@ -77,3 +77,8 @@ about:
   license_family: MIT
   license: MIT
   license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - bandersen23
+    - moorepants

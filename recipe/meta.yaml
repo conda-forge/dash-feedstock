@@ -1,46 +1,46 @@
 {% set name = "dash" %}
 {% set version = "2.18.2" %}
-{% set sha256 = "20e8404f73d0fe88ce2eae33c25bbc513cbe52f30d23a401fa5f24dbb44296c8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
+  sha256: 20e8404f73d0fe88ce2eae33c25bbc513cbe52f30d23a401fa5f24dbb44296c8
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - dash-generate-components = dash.development.component_generator:cli
+    - renderer = dash.development.build_process:renderer
+    - dash-update-components = dash.development.update_components:cli
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
-    - setuptools
+    - python {{ python_min }}
     - pip
-  run:
-    - python >=3.6
     - setuptools
-    - flask >=1.0.4
-    - werkzeug
+  run:
+    - python >={{ python_min }}
+    - flask >=1.0.4,<3.1
+    - werkzeug <3.1
     - plotly >=5.0.0
-    - typing-extensions >=4.1.1
+    - dash-html-components ==2.0.0
+    - dash-core-components ==2.0.0
+    - dash-table ==5.0.0
+    - importlib-metadata
+    - typing_extensions >=4.1.1
     - requests
     - retrying
     - nest-asyncio
-    - importlib-metadata
-  run_constrained:
-    - dash-html-components >=2.0.0
-    - dash-core-components >=2.0.0
-    - dash_table >=5.0.0
+    - setuptools
 
 test:
-  requires:
-    - pytest
   imports:
+    - dash
     - dash.dash
     - dash.dependencies
     - dash.exceptions
@@ -50,21 +50,23 @@ test:
     - dash.dash_table
     - dash.testing
   commands:
-    - pytest test_not_found.py
-    - conda install -c conda-forge dash-html-components dash-core-components dash-table -y
-    - pytest test_warnings.py
-  files:
-    - test_not_found.py
-    - test_warnings.py
+    - pip check
+    - dash-generate-components --help
+    - renderer --help
+    - dash-update-components --help
+  requires:
+    - python {{ python_min }}
+    - pip
+    - coloredlogs >=15.0.1
+    - fire >=0.4.0
+    - pyyaml >=5.4.1
 
 about:
-  home: https://plot.ly/dash
+  home: https://plotly.com/dash
+  summary: A Python framework for building reactive web-apps. Developed by Plotly.
   dev_url: https://github.com/plotly/dash
-  doc_url: https://dash.plotly.com
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: A Python framework for building reactive web-apps.
 
 extra:
   recipe-maintainers:

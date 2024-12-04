@@ -33,7 +33,7 @@ requirements:
     - python >={{ python_min }}
     # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
     - flask >=1.0.4
-    - werkzeug 
+    - werkzeug
     - plotly >=5.0.0
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

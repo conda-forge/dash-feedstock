@@ -25,12 +25,12 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - flask >=1.0.4,<3.1
-    - werkzeug <3.1
+    - flask >=1.0.4  # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
+    - werkzeug  # plotly/dash@457f71f
     - plotly >=5.0.0
-    - dash-html-components ==2.0.0
-    - dash-core-components ==2.0.0
-    - dash-table ==5.0.0
+    - dash-html-components >=2.0.0
+    - dash-core-components >=2.0.0
+    - dash-table >=5.0.0
     - importlib-metadata
     - typing_extensions >=4.1.1
     - requests

@@ -65,6 +65,8 @@ about:
   home: https://plotly.com/dash
   summary: A Python framework for building reactive web-apps. Developed by Plotly.
   dev_url: https://github.com/plotly/dash
+  doc_url: https://dash.plotly.com
+  license_family: MIT
   license: MIT
   license_file: LICENSE
 

@@ -50,6 +50,10 @@ test:
   requires:
     - pytest
     - python {{ python_min }}
+    - pip
+    - coloredlogs >=15.0.1
+    - fire >=0.4.0
+    - pyyaml >=5.4.1
   imports:
     - dash
     - dash.dash
@@ -71,12 +75,6 @@ test:
   files:
     - test_not_found.py
     - test_warnings.py
-  requires:
-    - python {{ python_min }}
-    - pip
-    - coloredlogs >=15.0.1
-    - fire >=0.4.0
-    - pyyaml >=5.4.1
 
 about:
   home: https://plotly.com/dash

@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "2.18.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: 20e8404f73d0fe88ce2eae33c25bbc513cbe52f30d23a401fa5f24dbb44296c8
+  sha256: 2cbb071836b3ca546dbe38655083908b8be543f3bea9c4bf660b96490d3d4953
 
 build:
   entry_points:
@@ -19,7 +19,7 @@ build:
     - sed -i.bak "s/Flask>=1.0.4,<3.1/flask>=1.0.4/g" requirements/install.txt
     - sed -i.bak "s/Werkzeug<3.1/werkzeug/g" requirements/install.txt
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -41,6 +41,7 @@ requirements:
     - retrying
     - nest-asyncio
     - setuptools
+    - stringcase >=1.2.0
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

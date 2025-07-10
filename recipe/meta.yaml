@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: ba53c46a6b12948ff6b8e1e4bda882a274277b131ec4698159447cfd027a7a51
+  sha256: 916b31cec46da0a3339da0e9df9f446126aa7f293c0544e07adf9fe4ba060b18
 
 build:
   entry_points:
@@ -16,8 +16,8 @@ build:
     - dash-update-components = dash.development.update_components:cli
   noarch: python
   script:
-    - sed -i.bak "s/Flask>=1.0.4,<3.1/flask>=1.0.4/g" requirements/install.txt
-    - sed -i.bak "s/Werkzeug<3.1/werkzeug/g" requirements/install.txt
+    - sed -i.bak "s/Flask>=1.0.4,<3.2/flask>=1.0.4/g" requirements/install.txt
+    - sed -i.bak "s/Werkzeug<3.2/werkzeug/g" requirements/install.txt
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -31,7 +31,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
+    # https://github.com/plotly/dash/blob/dev/requirements/install.txt
     - flask >=1.0.4
     - werkzeug
     - plotly >=5.0.0

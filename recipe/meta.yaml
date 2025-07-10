@@ -16,8 +16,8 @@ build:
     - dash-update-components = dash.development.update_components:cli
   noarch: python
   script:
-    - sed -i.bak "s/Flask>=1.0.4,<3.1/flask>=1.0.4/g" requirements/install.txt
-    - sed -i.bak "s/Werkzeug<3.1/werkzeug/g" requirements/install.txt
+    - sed -i.bak "s/Flask>=1.0.4,<3.2/flask>=1.0.4/g" requirements/install.txt
+    - sed -i.bak "s/Werkzeug<3.2/werkzeug/g" requirements/install.txt
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -31,7 +31,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    # https://github.com/plotly/dash/blob/v2.18.2/requirements/install.txt
+    # https://github.com/plotly/dash/blob/dev/requirements/install.txt
     - flask >=1.0.4
     - werkzeug
     - plotly >=5.0.0

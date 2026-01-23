@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: eaaa7a671540b5e1db8066f4966d0277d21edc2c7acdaec2fd6d198366a8b0df
+  sha256: 3944beb32000ee8b22cd7fbb33545a0a43e25916c63aa41ba59ee5611997815e
 
 build:
   entry_points:

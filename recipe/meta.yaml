@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: 17a92a87b0c1eacc025079a705e44e72cd4c5794629c0a2909942b611faeb595
+  sha256: 53c959f8f5d5a1cc79995f097211e9f4c7039db715fe7d88de4e874c0652cf54
 
 build:
   entry_points:
@@ -41,6 +41,7 @@ requirements:
     - retrying
     - nest-asyncio
     - setuptools
+    - janus >=1.0.0
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

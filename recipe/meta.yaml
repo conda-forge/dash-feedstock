@@ -41,6 +41,7 @@ requirements:
     - retrying
     - nest-asyncio
     - setuptools
+    - janus >=1.0.0
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

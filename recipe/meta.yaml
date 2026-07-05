@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: 1ec96641d5e3c06b7dfffad8241e345533d70327d96f722a8e13b827c287341b
+  sha256: 9155e4b1136b5a6bdae1fbd108f55a2ce9e9b4ac376dace4457c877cc7da279d
 
 build:
   entry_points:
@@ -43,7 +43,6 @@ requirements:
     - setuptools
     - janus >=1.0.0
     - pydantic >=2.10
-    - mcp >=1.23.0
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

@@ -42,11 +42,12 @@ requirements:
     - nest-asyncio
     - setuptools
     - janus >=1.0.0
+    - pydantic >=2.10
+    - mcp >=1.23.0  # [py310]
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0
     - dash_table >=5.0.0
-
 test:
   requires:
     - pytest

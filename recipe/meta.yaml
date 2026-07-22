@@ -43,6 +43,7 @@ requirements:
     - setuptools
     - janus >=1.0.0
     - pydantic >=2.10
+    - comm
   run_constrained:
     - dash-html-components >=2.0.0
     - dash-core-components >=2.0.0

@@ -1,5 +1,5 @@
 {% set name = "dash" %}
-{% set version = "4.5.1" %}
+{% set version = "4.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dash-{{ version }}.tar.gz
-  sha256: e0709a6784b69ee38b9c832c35d9013b4035c382034da1cce869bd626740f5c2
+  sha256: 45315b145e51026ca6fdcf7026f0d118369ad73177b41430b1d7ebc01a283e2b
 
 build:
   entry_points:
